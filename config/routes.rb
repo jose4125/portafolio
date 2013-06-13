@@ -1,4 +1,7 @@
 Portafolio::Application.routes.draw do
+
+  namespace(:admin){ resources :skills }
+
   get "welocme/index"
 
   #resources :projects
@@ -54,6 +57,7 @@ Portafolio::Application.routes.draw do
   #     resources :products
         resources :projects
         resources :labels
+        resources :users
      end
 
   # You can have the root of your site routed with "root"

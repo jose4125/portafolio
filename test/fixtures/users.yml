@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)
+#  descriptin :text
+#  ocupacion  :string(255)
+#  image      :string(255)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  name: MyString
+  descriptin: MyText
+  ocupacion: MyString
+  image: MyString
+
+two:
+  name: MyString
+  descriptin: MyText
+  ocupacion: MyString
+  image: MyString

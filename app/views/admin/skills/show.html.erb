@@ -1,0 +1,14 @@
+<p>
+  <strong>Name:</strong>
+  <%= @skill.name %>
+</p>
+<p>
+  <strong>Percent:</strong>
+  <%= @skill.percent %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_skill_path(@skill) %> |
+  <%= link_to "Destroy", [:admin, @skill], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_skills_path %>
+</p>

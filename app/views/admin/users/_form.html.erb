@@ -1,0 +1,36 @@
+<%= form_for [:admin, @user] do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :descriptin %><br />
+    <%= f.text_area :descriptin %>
+  </p>
+  <p>
+    <%= f.label :ocupacion %><br />
+    <%= f.text_field :ocupacion %>
+  </p>
+  <p>
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  <p>
+    <% Skill.all.each do |s| %>
+      <%= check_box_tag 'user[skill_ids][]', s.id, @user.skills.include?( s ) %>
+      <%= s.name %>
+    <% end %>
+  </p>
+  <p><%= f.submit %></p>
+
+<% end %>

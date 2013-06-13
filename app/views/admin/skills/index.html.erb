@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Percent</th>
+  </tr>
+  <% for skill in @skills %>
+    <tr>
+      <td><%= skill.name %></td>
+      <td><%= skill.percent %></td>
+      <td><%= link_to "Show", [:admin, skill] %></td>
+      <td><%= link_to "Edit", edit_admin_skill_path(skill) %></td>
+      <td><%= link_to "Destroy", [:admin, skill], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Admin/Skill", new_admin_skill_path %></p>

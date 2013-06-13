@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: skills
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)
+#  percent    :integer
+#  user_id    :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  name: MyString
+  percent: 1
+  user: 
+
+two:
+  name: MyString
+  percent: 1
+  user: 
