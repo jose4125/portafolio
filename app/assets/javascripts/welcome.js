@@ -7,7 +7,7 @@ function chart(){
                 margin: [ 50, 50, 100, 80]
             },
             title: {
-                text: ''
+                text: 'Skills'
             },
             xAxis: {
                 categories: cat,
@@ -23,7 +23,7 @@ function chart(){
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Population (millions)'
+                    text: 'skills percent'
                 }
             },
             legend: {

@@ -1,0 +1,15 @@
+// Place all the styles related to the labels controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$gris_oscuro: #4f5152;
+$azul: #2f7ed8;
+$azulrgb: 47, 126, 216;
+
+@mixin font_regular(){
+  font-family: georgia;
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin bgazultrans(){
+  background: rgba(47,126,216,.8);
+}

@@ -1,0 +1,33 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'app';
+
+#linetop{
+  border-bottom: 4px solid $gris_oscuro;
+}
+.wrap-header{
+  height: 250px;
+  backGround: lighten( $gris_oscuro, 60% );
+
+  .contlogo{
+    @include bgazultrans();
+  }
+  h2{
+    @include font_regular();
+    color: #fff;
+    margin: 0 0 0 0;
+  }
+  h4{
+    @include font_regular();
+    color: lighten( $azul, 40% );
+    margin: 0 0 0 0;
+    
+  }
+  p{
+    @include font_regular();
+    color: lighten( $azul, 20% );
+    margin: 0 0 0 0;
+    
+  }
+}

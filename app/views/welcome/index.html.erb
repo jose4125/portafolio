@@ -1,15 +1,18 @@
+<% content_for :header do %>
   <div class="row">
     <div class="large-3 columns">
-      <h1><img src="/assets/gafas.jpg" /></h1>
+      <h1><img src="/assets/gafas.png" /></h1>
     </div>
     <div class="large-9 columns">
       <hgroup>
         <h2><%= @users.name %></h2>
         <h4><%= @users.ocupacion %></h4>
-        <h4><%= @arrayname %></h4>
+        <p>Github: <a href="<% @users.github %>"><% @suers.github %></a></p>
+        <p>Linkedin:</p>
       </hgroup>
     </div>
    </div>
+ <% end%>
   
 <!-- End Header and Nav -->
  
