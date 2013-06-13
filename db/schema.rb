@@ -11,16 +11,39 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130612040512) do
+ActiveRecord::Schema.define(:version => 20130612153152) do
 
   create_table "categoria", :force => true do |t|
     t.string   "name"
-    t.integer  "proyecto_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "labels", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "labels_projects", :id => false, :force => true do |t|
+    t.integer "label_id"
+    t.integer "project_id"
+  end
+
+  create_table "labels_proyectos", :id => false, :force => true do |t|
+    t.integer "label_id"
+    t.integer "proyecto_id"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "imagen"
+    t.string   "desc_corta"
+    t.string   "url"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
-
-  add_index "categoria", ["proyecto_id"], :name => "index_categoria_on_proyecto_id"
 
   create_table "proyectos", :force => true do |t|
     t.string   "nombre"
