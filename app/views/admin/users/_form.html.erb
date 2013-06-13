@@ -26,6 +26,22 @@
     <%= f.label :image %><br />
     <%= f.text_field :image %>
   <p>
+  <p>
+    <%= f.label :mail %><br />
+    <%= f.text_field :mail %>
+  <p>
+  <p>
+    <%= f.label :github %><br />
+    <%= f.text_field :github %>
+  <p>
+  <p>
+    <%= f.label :linkedin %><br />
+    <%= f.text_field :linkedin %>
+  <p>
+  <p>
+    <%= f.label :celular %><br />
+    <%= f.text_field :celular %>
+  <p>
     <% Skill.all.each do |s| %>
       <%= check_box_tag 'user[skill_ids][]', s.id, @user.skills.include?( s ) %>
       <%= s.name %>

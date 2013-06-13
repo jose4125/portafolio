@@ -4,6 +4,10 @@
     <th>Descriptin</th>
     <th>Ocupacion</th>
     <th>Image</th>
+    <th>E-mail</th>
+    <th>Github</th>
+    <th>Linkedin</th>
+    <th>Celular</th>
   </tr>
   <% for user in @users %>
     <tr>
@@ -11,6 +15,10 @@
       <td><%= user.descriptin %></td>
       <td><%= user.ocupacion %></td>
       <td><%= user.image %></td>
+      <td><%= user.mail %></td>
+      <td><%= user.github %></td>
+      <td><%= user.linkedin %></td>
+      <td><%= user.celular %></td>
       <td><%= link_to "Show", [:admin, user] %></td>
       <td><%= link_to "Edit", edit_admin_user_path(user) %></td>
       <td><%= link_to "Destroy", [:admin, user], :confirm => 'Are you sure?', :method => :delete %></td>

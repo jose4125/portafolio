@@ -15,6 +15,22 @@
   <%= @user.image %>
 </p>
 <p>
+  <strong>E-mail:</strong>
+  <%= @user.mail %>
+</p>
+<p>
+<p>
+  <strong>Github:</strong>
+  <%= @user.github %>
+</p>
+<p>
+  <strong>Linkedin:</strong>
+  <%= @user.linkedin %>
+</p>
+<p>
+  <strong>Celular:</strong>
+  <%= @user.celular %>
+</p>
   <strong>Skills:</strong>
   <% @user.skills.each do |s| %>
     <%= s.name %>
