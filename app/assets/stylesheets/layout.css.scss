@@ -24,10 +24,13 @@
     margin: 0 0 0 0;
     
   }
-  p{
+  p, a{
     @include font_regular();
     color: lighten( $azul, 20% );
     margin: 0 0 0 0;
     
+  }
+  a:hover{
+    color: #fff;
   }
 }
