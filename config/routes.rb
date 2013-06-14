@@ -1,8 +1,8 @@
 Portafolio::Application.routes.draw do
 
-  namespace(:admin){ resources :skills }
 
   get "welocme/index"
+  namespace(:admin){ resources :skills }
 
   #resources :projects
 
