@@ -1,9 +1,8 @@
 Portafolio::Application.routes.draw do
 
-
   get "welocme/index"
-  namespace(:admin){ resources :skills }
 
+  match '/admin', to: 'admin/sessions#new'
   #resources :projects
 
 
@@ -55,9 +54,11 @@ Portafolio::Application.routes.draw do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
+        resources :sessions, only: [:new, :create]
         resources :projects
         resources :labels
         resources :users
+        resources :skills
      end
 
   # You can have the root of your site routed with "root"
