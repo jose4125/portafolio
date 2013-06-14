@@ -48,4 +48,4 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem "mocha", :group => :test
+#gem "mocha", :group => :test
