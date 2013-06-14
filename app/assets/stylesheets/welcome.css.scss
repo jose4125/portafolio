@@ -1,3 +1,44 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'app';
+
+.borbottom .row{
+  clear: both;
+  border-bottom: 2px solid $azul;
+}
+
+.contProy{
+  border-right: 1px dashed lighten($gris_oscuro, 50%);
+  h4{
+    @include font_regular();
+    margin: 0 0 0 0;
+  }
+  a{
+    color: lighten($gris_oscuro, 40%);
+    font-size: 0.9em;
+    margin: 0 0 5px 0;
+    &:hover{
+      color: $gris_oscuro;
+    }
+  }
+  p{
+    font-size: 0.8em;
+    margin: 10px 0 0 0;
+    color: $gris_oscuro
+  }
+  .panel{
+    margin: 5px 0 0 0;
+    padding: 4px;
+  }
+  .label{
+    padding: 3px;
+    border-bottom: 1px solid $azul;
+    font-size: 0.8em;
+    font-weight: 200;
+    color: lighten($gris_oscuro, 20%);
+  }
+}
+.marbottom{
+  margin-bottom: 40px;
+}

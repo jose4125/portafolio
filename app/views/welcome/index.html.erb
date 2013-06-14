@@ -18,6 +18,7 @@
  
 <!-- First Band (Slider) -->
  
+<div class="borbottom">
   <div class="row">
     <div class="large-6 columns">
       <h4>Descripción</h4>
@@ -27,24 +28,29 @@
       <div id="container">
       </div>
     </div>
-    
-    <hr />
   </div>
+</div>
   
 <!-- Three-up Content Blocks -->
  
-	<div class="row">
+<div class="marbottom">
+  <div class="row">
     <h4>Proyectos</h4>
     <% @proyectos.each do |p|%>
-		<div class="large-3 columns">
-      <img src="http://placehold.it/400x300&text=[img]" />
-      <h4><%= p.name %></h4>
-      <p><%= p.desc_corta %></p>
-    </div>
+      <div class="large-3 columns contProy">
+        <a class="th radius"><img src="http://placehold.it/400x300&text=[img]" /></a>
+        <h4><%= p.name %></h4>
+        <%= link_to p.url, p.url, target: "_blank"  %>
+        <p><%= p.desc_corta %></p>
+        <div class="panel">
+          <% p.labels.each do |l|%>
+            <div class="label secondary"><%= l.name %></div>
+          <% end%>
+        </div>
+      </div>
     <% end%>
-    
-	
   </div>
+</div>
     
 <!-- Call to Action Panel -->
 <div class="row">
