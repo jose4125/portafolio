@@ -2,6 +2,8 @@ module Admin
   class ProjectsController < ApplicationController
     # GET /projects
     # GET /projects.json
+    layout 'admin'
+    before_filter :auth
     def index
       @projects = Project.all
 

@@ -1,4 +1,6 @@
 class Admin::SkillsController < ApplicationController
+  layout 'admin'
+  before_filter :auth
   def index
     @skills = Skill.all
   end

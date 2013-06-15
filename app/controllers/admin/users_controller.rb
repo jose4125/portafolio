@@ -1,4 +1,6 @@
 class Admin::UsersController < ApplicationController
+  layout 'admin'
+  before_filter :auth
   def index
     @users = User.all
   end

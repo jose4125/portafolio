@@ -3,6 +3,8 @@ Portafolio::Application.routes.draw do
   get "welocme/index"
 
   match '/admin', to: 'admin/sessions#new'
+  match '/admin/logout', to: 'admin/sessions#destroy', via: :delete
+
   #resources :projects
 
 

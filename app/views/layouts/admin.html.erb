@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portafolio</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="linetop"></div>
+  <header class="wrap-header">
+    <% if logged_in? %>
+    <%= link_to "Logout (#{current_user.name})", admin_logout_path, method: 'delete' %>
+    <% end %>
+    <div class="contlogo">
+      <%= yield :header %>
+    </div>
+  </header>
+
+
+<%= yield %>
+
+  <%= javascript_include_tag "application" %>
+
+  <%= yield :footer_scripts %>
+</body>
+</html>

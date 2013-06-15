@@ -14,4 +14,7 @@ class ApplicationController < ActionController::Base
     def logged_in?
       !current_user.nil?
     end
+    def auth
+      redirect_to admin_url unless logged_in?
+    end
 end
