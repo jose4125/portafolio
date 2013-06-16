@@ -58,12 +58,12 @@ class Admin::ProjectsController < ApplicationController
   # PUT /projects/1
   # PUT /projects/1.json
   def update
-    params[:project][:label_ids] ||= []
+    params[:project][:skill_ids] ||= []
     @project = Project.find(params[:id])
 
     respond_to do |format|
       if @project.update_attributes(params[:project])
-        format.html { redirect_to [:adimin, @project], notice: 'Project was successfully updated.' }
+        format.html { redirect_to [:admin, @project], notice: 'Project was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -13,11 +13,12 @@
 #
 
 class Project < ActiveRecord::Base
-  attr_accessible :desc_corta, :description, :imagen, :name, :url, :skill_ids
+  attr_accessible :desc_corta, :description, :imagen, :name, :url, :skill_ids, :photo
   has_and_belongs_to_many :skills
   has_attached_file :photo, style: { medium: '300X300>'},
-                    url: "/assets/projects/:id/:style/:basename.:extension",
-                    path: ":rails_root/public/assets/projects/:id/:style/:basename.:extension"
+                    :default_url => '/assets/default.jpg',
+                    url: "/:attachment/:id/:style/:basename.:extension",
+                    path: ":rails_root/public/:attachment/:id/:style/:basename.:extension"
 
   validates_attachment_size :photo, less_than: 5.megabytes
   validates_attachment_content_type :photo, content_type: ['image/jpeg', 'image/png']
