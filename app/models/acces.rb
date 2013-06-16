@@ -1,5 +1,8 @@
 class Acces < ActiveRecord::Base
-  attr_accessible :name, :password, :password_confirmation
+  attr_accessible :name, :password_digest
 
-  has_secure_password
+  def authenticate( password )
+    pass = Acces.find_by_password_digest( password )
+  end
+
 end
