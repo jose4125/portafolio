@@ -25,7 +25,9 @@
   p{
     font-size: 0.8em;
     margin: 10px 0 0 0;
-    color: $gris_oscuro
+    color: $gris_oscuro;
+    max-height: 150px;
+    overflow:hidden;
   }
   .panel{
     margin: 5px 0 0 0;
@@ -52,4 +54,14 @@
 }
 .marbottom{
   margin-bottom: 40px;
+}
+.contFollow{
+  a, span{
+  display: inline-block;
+  color: lighten($gris_oscuro, 25%);
+  font-size: 0.9em;
+  }
+  p{
+    margin: 0;
+  }
 }

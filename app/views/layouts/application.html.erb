@@ -17,7 +17,9 @@
 <%= yield %>
 
   <%= javascript_include_tag "application" %>
-
+  <footer>
+    <%= yield :footer %>
+  </footer>
   <%= yield :footer_scripts %>
 </body>
 </html>

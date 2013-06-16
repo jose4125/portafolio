@@ -35,9 +35,9 @@
  
 <div class="marbottom">
   <div class="row">
-    <h4>Proyectos</h4>
-    <% @proyectos.each do |p|%>
-      <div class="large-3 columns contProy">
+  <h4>Proyectos realizados</h4>
+  <% @proyectos.each do |p|%>
+      <div class="large-3 columns contProy end">
         <figure>
           <a class="th radius"><%= image_tag p.photo.url, width: "100%" %></a>
         </figure>
@@ -59,7 +59,7 @@
     <div class="large-12 columns">
     
       <div class="panel">
-        <h4>Get in touch!</h4>
+        <h4>Contacto</h4>
             
         <div class="row">
           <div class="large-9 columns">
@@ -76,24 +76,36 @@
  
   <!-- Footer -->
   
-  <footer class="row">
+  <%= content_for :footer do %>
+    <hr />
     <div class="large-12 columns">
-      <hr />
       <div class="row">
-        <div class="large-6 columns">
-          <p>&copy; Copyright no one at all. Go to town.</p>
+        <div class="large-9 columns">
+          <!-- AddThis Button BEGIN -->
+          <div class="addthis_toolbox addthis_default_style ">
+            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            <a class="addthis_button_tweet"></a>
+            <a class="addthis_counter addthis_pill_style"></a>
+          </div>
+          <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=jose4125"></script>
+          <!-- AddThis Button END -->
         </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
+        <div class="large-3 columns">
+          <ul class="inline-list right contFollow">
+            <li></li>
+            <li>
+              <span>Follow me</span>
+                <a class="addthis_button_twitter_follow" addthis:userid="jd4125"></a>
+                <a class="addthis_button_linkedin_follow" addthis:userid="josedavidlombana"></a>
+                <a class="addthis_button_google_follow" addthis:userid="107616955910551901241"></a>
+              <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50967f6b452e735b"></script>
+            </li>
           </ul>
         </div>
       </div>
     </div> 
-  </footer>
+  <% end %>
   <% content_for :footer_scripts do %>
     <%= javascript_tag do%>
       var cat = <%=raw @arrayname %> 
