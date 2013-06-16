@@ -13,4 +13,5 @@
 class Skill < ActiveRecord::Base
   attr_accessible :name, :percent, :user
   belongs_to :user
+  has_and_belongs_to_many :projects
 end

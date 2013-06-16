@@ -43,8 +43,8 @@
         <%= link_to p.url, p.url, target: "_blank"  %>
         <p><%= p.desc_corta %></p>
         <div class="panel">
-          <% p.labels.each do |l|%>
-            <div class="label secondary"><%= l.name %></div>
+          <% p.skills.each do |s|%>
+            <div class="label secondary"><%= s.name %></div>
           <% end%>
         </div>
       </div>

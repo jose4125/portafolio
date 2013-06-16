@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.12'
 gem 'heroku'
 gem 'bcrypt-ruby'
+gem "paperclip", "~> 3.0"
 
 
 # Bundle edge Rails instead:

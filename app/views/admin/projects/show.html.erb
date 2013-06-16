@@ -12,7 +12,7 @@
 
 <p>
   <b>Imagen:</b>
-  <%= @project.imagen %>
+  <%= image_tag @project.photo.url(:medium) %>
 </p>
 
 <p>
@@ -25,9 +25,9 @@
   <%= @project.url %>
 </p>
 <b>labels:</b>
-<% @project.labels.each do |p| %>
+<% @project.skills.each do |s| %>
   <p>
-    <%= p.name %>
+    <%= s.name %>
   </p>
 <% end %>
 
