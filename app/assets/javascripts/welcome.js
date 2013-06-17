@@ -32,8 +32,8 @@ function chart(){
             tooltip: {
                 formatter: function() {
                     return '<b>'+ this.x +'</b><br/>'+
-                        'Population in 2008: '+ Highcharts.numberFormat(this.y, 1) +
-                        ' millions';
+                        'Percent Skill: '+ Highcharts.numberFormat(this.y, 1) +
+                        '%';
                 }
             },
             series: [{
