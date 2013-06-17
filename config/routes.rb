@@ -1,6 +1,8 @@
 Portafolio::Application.routes.draw do
 
   get "welocme/index"
+  get 'contact' => 'contact#new', as: 'contact'
+  post 'contact' => 'contact#create', as: 'contact'
 
   match '/admin', to: 'admin/sessions#new'
   match '/admin/logout', to: 'admin/sessions#destroy', via: :delete
