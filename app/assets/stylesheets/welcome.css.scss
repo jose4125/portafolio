@@ -10,14 +10,19 @@
 
 .contProy{
   border-right: 1px dashed lighten($gris_oscuro, 50%);
+  margin: 0 0 15px 0;
   h4{
     @include font_regular();
     margin: 0 0 0 0;
   }
-  a{
+  .btnUrl{
     color: lighten($gris_oscuro, 40%);
     font-size: 0.9em;
     margin: 0 0 5px 0;
+    height: 15px;
+    width: 100%;
+    overflow: hidden;
+    display: block;
     &:hover{
       color: $gris_oscuro;
     }
@@ -26,7 +31,7 @@
     font-size: 0.8em;
     margin: 10px 0 0 0;
     color: $gris_oscuro;
-    max-height: 150px;
+    height: 84px;
     overflow:hidden;
   }
   .panel{
