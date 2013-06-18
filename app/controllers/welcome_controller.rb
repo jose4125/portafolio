@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @proyectos = Project.all
+    @proyectos = Project.order("created_at DESC").all
     @users = User.find ( 1 )
     @arrayname = []
     @arrayper = []

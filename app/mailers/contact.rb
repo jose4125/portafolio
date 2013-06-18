@@ -1,5 +1,5 @@
 class Contact < ActionMailer::Base
-  default to: "jose4125@hotmail.com"
+  default to: "jose4125@gmail.com"
   #default from: "jose4125@hola.com"
 
   def contact_portafolio( content )
