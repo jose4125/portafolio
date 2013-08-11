@@ -7,6 +7,7 @@
     <th>Imagen</th>
     <th>Desc corta</th>
     <th>Url</th>
+    <th>Year</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,6 +20,7 @@
     <td><%= project.imagen %></td>
     <td><%= project.desc_corta %></td>
     <td><%= project.url %></td>
+    <td><%= project.year %></td>
     <td><%= link_to 'Show', [:admin, project] %></td>
     <td><%= link_to 'Edit', edit_admin_project_path(project) %></td>
     <td><%= link_to 'Destroy', [:admin, project], method: :delete, data: { confirm: 'Are you sure?' } %></td>

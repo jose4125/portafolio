@@ -32,6 +32,10 @@
     <%= f.text_field :url %>
   </div>
   <div class="field">
+    <%= f.label :year %><br />
+    <%=  f.select(:year, 2000..Time.now.year, :selected=>(f.object.year || Time.now.year)) %>
+  </div>
+  <div class="field">
     <% Skill.all.each do |s|%>
       <%= check_box_tag 'project[skill_ids][]', s.id, @project.skills.include?( s ) %>
       <%= label_tag s.name %>
