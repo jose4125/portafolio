@@ -43,6 +43,7 @@
         </figure>
         <h4><%= p.name %></h4>
         <%= link_to p.url, p.url, target: "_blank", class: 'btnUrl'  %>
+        <span class="subheader year">related year: <%= p.year %></span>
         <p><%= p.desc_corta %></p>
         <div class="panel">
           <% p.skills.each do |s|%>
