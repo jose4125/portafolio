@@ -11,6 +11,7 @@
 .contProy{
   border-right: 1px dashed lighten($gris_oscuro, 50%);
   margin: 0 0 15px 0;
+  min-height: 430px;
   h4{
     @include font_regular();
     margin: 0 0 0 0;
